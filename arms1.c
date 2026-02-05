@@ -5,9 +5,10 @@ void main(){
   printf("Enter your Number:");
   scanf("%d",&n);
   int temp=n;
-  while(n!=0){
-    n=n/10;
-    count++;}
+  int original = n;
+  while(temp!=0){
+    count++;
+    temp=temp/10;}
   temp = n;
   while(temp!=0){
      r=temp%10;
@@ -15,7 +16,7 @@ void main(){
      sum=sum+result;
      temp=temp/10;
      }
-  if(n==sum){
+  if(original==sum){
     printf("number is armstrong");
   }
   else{
